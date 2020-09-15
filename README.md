@@ -52,13 +52,31 @@ CREATE TABLE [dbo].[Thing]
 GO
 ``` 
 
-## 5- Running the project
+## 5a- Running the project (in Visual Studio)
 You are all set to start, just set the WebAPI project as the "start up project" and start debugging.
 Once it opens the browser, go to 
 ```
 https://localhost:40890/swagger/index.html
 ```
-## Regenerating the db model
+
+## 5b- Running the project (using Docker)
+--work in progress-- I still need to define how to access the SQL Server from one container to the other.
+To run this project in a container, we need to first build the docker image.  
+Open a terminal/command line and go to the root folder of the project, where the Dockerfile is.
+Enter the following
+```
+docker build -t webapiapp .
+```
+Once the image is built, we need to run it:
+```
+docker run -d -p 8080:80 --name mynewwebapi webapiapp
+```
+This will let us access web api running from the container in this address
+```
+http:\\localhost:8080
+```
+
+## *optional: Regenerating the db model
 If you need to regenerate the db model, open a terminal and go to the DAL project folder. Execute this command:
 ```
 dotnet ef dbcontext Scaffold "Server=localhost,1401;Initial Catalog=MyMiscelaneousDatabase;
