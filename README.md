@@ -3,8 +3,6 @@
 This is a scaffolding for creating an ASP.NET Core WebAPI with a Microsoft SQL Server database. It comes with my preferred dependencies:
 - EntityFramework
 - Automapper
-- xUnit
-- Moq
 - Swagger
 
 This tutorial will walk you through the steps to install docker and load an SQLServer, create a database and connect it to use with the WebAPI.
