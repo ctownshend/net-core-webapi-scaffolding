@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
-using RefactorThis.Core.DTOs;
-using RefactorThis.DAL.Models;
+using DAL.Models;
+using DAL.Repositories.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RefactorThis.DAL.Configuration
+namespace DAL.Configuration
 {
     public class ModelMapper : IModelMapper
     {
@@ -17,8 +17,7 @@ namespace RefactorThis.DAL.Configuration
         {
             var config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Product, ProductDTO>().ReverseMap();
-                cfg.CreateMap<ProductOption, ProductOptionDTO>().ReverseMap();
+                cfg.CreateMap<Thing, ThingDTO>().ReverseMap();
             });
             Mapper = config.CreateMapper();
         }

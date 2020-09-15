@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DAL.Models
+namespace DAL.Repositories.DTOs
 {
-    public partial class Thing
+    public class ThingDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }

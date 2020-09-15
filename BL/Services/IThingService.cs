@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using DAL.Models;
 using DAL.Repositories.DTOs;
 
-namespace DAL.Repositories
+namespace BL.Services
 {
-    public interface IThingRepository
+    public interface IThingService
     {
         ThingDTO Get(int id);
         IEnumerable<ThingDTO> GetAll();

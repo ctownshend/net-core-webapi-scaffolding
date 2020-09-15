@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RefactorThis.DAL.Configuration
+namespace DAL.Configuration
 {
     public interface IModelMapper
     {
