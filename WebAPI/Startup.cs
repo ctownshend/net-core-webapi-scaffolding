@@ -36,7 +36,7 @@ namespace WebAPI
                     .UseSqlServer(myDatabaseConnectionString)
                     .Options;
 
-            services.AddSingleton(s => new MyMiscelaneousDatabaseContext(options));
+            services.AddScoped(s => new MyMiscelaneousDatabaseContext(options));
             services.AddSingleton<IModelMapper, ModelMapper>();
             services.AddScoped<IThingService, ThingService>();
             services.AddScoped<IThingRepository, ThingRepository>();
