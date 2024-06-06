@@ -86,3 +86,6 @@ This will create the new model classes and database context with updated details
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+
+http://localhost:27967/swagger/index.html
